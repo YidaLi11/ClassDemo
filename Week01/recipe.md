@@ -25,8 +25,6 @@
 5. **_Enjoy_**!🍴 
 
  —————————————————
-
- [![Milk Custard](/assets/images/MilkCustard.jpg "Milk Custard")](https://www.sidechef.com/recipe/3d50431f-bea8-4512-ba50-a884d2c883fd.jpg?d=1408x1120)
  
  
 

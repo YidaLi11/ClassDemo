@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--this specify the character set in coding, 
+        without this tag our fronts might not work properly -->
+        <meta charset="utf-8"/> 
+        <!--the viewport tag sets the initial scale and ensures
+        proper respnsive behavior-->
+        <meta name ="viewport" content="width=device-with, initial-scale=1" /> 
+        <!--The title tag shows up in the browser tag-->
+        <title>HTML boilerplate</title>  
+        <!--This is how we make a =n internal stylesheet-->
+        <style>
+            P { color:Blue
+        }
+
+        br {
+            color:blue
+        }
+
+        div{
+            color:blue
+        }
+
+        h2,h3,h4 {
+            background-color: #00FF99;
+        }
+
+        a {
+            color: rgb(238, 143, 36);
+            background-color: rgba(255,99,71,0.5);
+        }
+
+        li {
+            color:bisque
+        }
+
+        </style>
+      
+    </head>
+    <body>
+        <!--everything in the body tag shows up to the user unless
+        modified to be not visible with css-->
+         Text without mark still shows up
+        <!--only H1 per page-->
+        <h1>Heading 1 is the most important text on the page. We can only have 1 per page</h1>
+        <h2>As the numer gets bigger, the text gets smaller</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <!--horizontal rule aka page divider-->
+        <hr />
+        <!--misc text will mostly be like p tag -->
+        <p>Hi hi <br>hi hi<div>hi hi hi</div> hi hi<br/> hi hi</p> <p>Yes <strong>Yes Yes Yes</strong> <span style="color:blue; display:block">Yes</span>Yes Yes</p>
+
+        <h2>Buttermilk Pancakes</h2>
+        <P>These are the best Pancakes in the world</P>
+        <!--image hosted on other website-->
+        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F02%2F17%2F21014-Good-old-Fashioned-Pancakes-mfs_002.jpg&q=60&c=sc&poi=auto&orient=true&h=512"/>
+        <!--local image in same folder-->
+        <img src="Pancake.jpg" width="100px" height="300px"/>
+        <!--image in a subfolder-->
+        <img src="img/Pancake.jpg"/>
+
+        <hr />
+        <!--As dummy link-->
+        <a href="#">Dummy link using #</a>
+        <a href="About/index.html">About</a>
+        <!--Linking to an element in the same page by ID-->
+        <a href="#top">Back to Top</a>
+        <!--Unordered list aka oreder doresnt matter-->
+
+        <ul>
+            <li>Ingredient</li>
+            <li>Ingredient</li>
+            <li>Ingredient</li>
+            <li>Ingredient
+                <ol>
+                    <li>Subitem 1</li>
+                    <li>Subitem 1</li>
+                    <li>Subitem 1</li>
+                </ol>
+            </li>
+            <li>Ingredient</li>
+        </ul>          
+     <!--sometimes order matters, use a order list-->
+     <ol>
+        <li>Ingredient</li>
+        <li>Ingredient</li>
+        <li>Ingredient</li>
+        <li>Ingredient</li>
+        <li>Ingredient</li>
+     </ol>
+    </body>
+</html>
