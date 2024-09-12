@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Semantic Markup</title>
+    <meta
+      name="description"
+      content="Starter template for using semantic HTML elements to organize our code before we begin CSS layouts next week."
+    />
+    <meta name="keywords" content="HTML, Semantic HTML, Tutorial" />
+    <meta name="author" content="NYU" />
+    <style>
+      aside{
+        width:30%;
+        padding-left:15px;
+        margin-left:15px;
+        float:right;
+        background-color: antiquewhite;
+        font-size: large;
+      
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Here is some starter content. We will mark this up to contain a header, nav, article, section, aside, footer and more! Bonus points if you use even more semantic HTML elements in your HW this week. -->
+    <!-- We will be marking this up as our main menu -->
+<header>
+  <H1>My Online Store</H1> 
+  <Nav>
+    <a href="#">Home</a>
+    <a href="#">New Arrivals</a>
+    <a href="#">Accessories</a>
+    <a href="#">Clothing</a>
+    <a href="#">Footwear</a>
+  </Nav>
+</header>
+
+    <!-- Main Navigation -->
+ 
+    </Nav>
+    <!-- End Main Navigation -->
+
+    <!-- Lets assume we are on a product page for some sort of shoe type -->
+    <!-- Since we are in the shoe section, we might want to help the user choose other shoe types easily with a sidebar -->
+
+    <!-- Sidebar with seconday navigation -->
+      <Nav>
+        <li><a href="#">Boots</a></li>
+        <li><a href="#">Sandals</a></li>
+        <li><a href="#">Flip</a></li>
+        <li><a href="#">Flops</a></li>
+        <li><a href="#">Flats</a></li>
+        <li><a href="#">Heals</a></li>
+        <li><a href="#">Sneakers</a></li>
+      </Nav>
+
+    <!-- Subnav for different sneaker types -->
+    <aside>
+      <Nav>
+        <li><a href="#">Cross</a></li>
+        <li><a href="#">Trainers</a></li>
+        <li><a href="#">Running</a></li>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Slip</a></li>
+        <li><a href="#">Ons</a></li>
+      </Nav>
+    </aside>
+   
+    <!-- Sidebar with seconday navigation -->
+     <br/>
+
+    <!-- Main page content -->
+    <!-- Here is where we would show thumbnail images for all of our running shoes. We are going to use placeholder kittens from https://placekitten.com/. We will reuse the same thumbnail and description 6 times.  -->
+    <!-- Title for our page, remember, we have already used an H1, and we should only have 1 H1 per page! -->
+   <article>
+    <h2>Sneakers</h2>
+    <figure>
+      <img src="http://placehold.it/300x200" />
+      <figcaption><strong>This is a fancy shoe</strong></figcaption>
+     </figure>
+     <p><strong>$70</strong></p>
+     <p><a href="#">#1 shoe</a></p>
+
+  </article> 
+  <article>
+    <h2>Heels</h2>
+    <figure>
+      <img src="http://placehold.it/300x200" />
+      <figcaption><strong>This is a fancy shoe</strong></figcaption>
+     </figure>
+     <p><strong>$70</strong></p>
+     <p><a href="#">#2 shoe</a></p>
+
+  </article>
+
+    <!-- Individual image, with caption using figure and figcaption -->
+     
+    <!-- This text should be emphasized -->
+    <!-- Price on new line, make this text strong -->
+
+    
+    <!-- A link to the individual product page, again on a new line -->
+
+    <!-- End Individual image, with caption using figure and figcaption -->
+
+    <!-- Copy figure stuff 5 times, make sure it is all contained in the wrapper for our main page content! -->
+
+    <!-- End Main page content  -->
+
+    <!-- And finally, a footer for our page!  -->
+     <footer>&copy; Shoe Store 2016</footer>
+    <!-- social links, We will cover font awesome icons soon -->
+    <Nav>
+      <a href="#">Facebook</a>
+      <a href="#">twitter</a>
+      <a href="#">Instagram</a>
+    </Nav>
+  </body>
+</html>
