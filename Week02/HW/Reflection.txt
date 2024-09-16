@@ -1,0 +1,7 @@
+It mainly covers something we need to know before making a webpage, start making a draft of the web page early, get some external feedback, and use the right tools. 
+These are very important for web design. This is to ensure that we maintain efficiency and a good result when designing web pages. 
+This article focuses on some important steps in UIUX design. For my recipe pages, the main users are probably going to be people who cook. 
+Therefore, I think it is very important to help people get better information when they are cooking. 
+In addition, it is also important to do some research with users. 
+This research may help us understand how users are going to use our recipes website for information or what their ideal web page would look like.
+ I think these will all contribute to the UIUX section of this page. 
