@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url(https://052d1f16615cd6169700.b-cdn.net/wp-content/uploads/2020/10/pexels-ksenia-chernaya-3952054-scaled.jpg.webp) no-repeat center center fixed;
+}
+
+body{
+    font-family: "Sofadi One", system-ui;
+    font-size: 1rem;
+}
+
+h1{
+    padding: 0px 100px 0px 100px;
+    color: rgb(167, 111, 37);
+    font-size: 60px;
+    text-align: center;
+    background-color: rgba(253, 253, 253, 0.5);
+}
+
+ul {
+    display: inline;
+    margin: 0 0 0 350px;
+    padding: 0px 0px 0px 0px;
+    list-style-type: none;
+}
+
+ul li {
+    position: relative;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    margin: 20px 0px 0px 130px;
+    cursor: pointer;
+    padding: 0 0 0 0;
+    transition: all 0.8s;
+}
+
+ul li:hover{
+    color: rgb(225, 127, 15);
+    background-color: bisque;
+} 
+
+ul li ul{
+    padding: 0;
+    position: absolute;
+    top:30px;
+    left:-450px;
+    width: 300px;
+    display: none;
+    opacity: 1;
+    transition: opacity 0.8s;
+    z-index: 100;
+}
+
+ul li ul li{
+    display: block;
+    color: rgb(132, 90, 34);
+    background: rgb(255, 255, 255);
+  }
+
+
+ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+a {
+    text-decoration: none;
+    color: rgb(167, 138, 101);
+}
+
+.container{
+    display: inline-block;
+    position: absolute;
+    margin: 80px 0px 0px -1000px;
+    font-size: 0;
+}
+
+.photo{
+    width: 100%;
+    height: auto;
+}
+
+.photo p {
+    font-size: 30px;
+    margin: 0 0 0 20px;
+    position: absolute;
+    top: 400px;
+    width: 500px;
+    text-align: center;
+    color: rgb(255, 119, 0);
+    text-decoration: wavy;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(239, 224, 205,0.5);
+}
+
+h2{
+    margin: 20px 0px 0px 700px;
+    padding: 10px 0px 0px 20px;
+    position: absolute;
+    font-size: 30px;
+    color: rgb(172, 129, 74);
+}
+
+.ingredients{
+    display: inline-block;
+    padding: 0;
+    margin: 100px 0 0 720px;;
+    font-size: 30px;
+    color: rgb(155, 89, 8);
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(239, 224, 205,0.5);
+}
+
+ol{
+    margin: 80px 0 0 720px;
+    padding: 0 0 0 45px;
+    display: inline-block;
+    font-size: 30px;
+    color: rgb(240, 172, 0);
+    border: 10px solid rgb(255, 255, 255);
+    background-color: rgb(239, 224, 205,0.5);
+}
+
+strong {
+    color: rgb(255, 149, 0);
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.photo2 {
+    position: absolute;
+    margin: -670px 0 0 1100px;
+}

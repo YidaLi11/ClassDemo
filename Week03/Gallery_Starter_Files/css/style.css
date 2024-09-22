@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* font-family: "Kaushan Script", cursive; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* This is how we get a full sized text background */
+    /* Subtlle pattern */
+    background: url('../img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* We want to apply default font style at the body and all tags 
+and children elements will ingerit it unless we overwrite it with another
+style further down */
+body {
+    font-family: "Kaushan Script", cursive;
+}
+
+.container {
+    width: 900px;
+    /* auto only work with width */
+    margin: 0 auto;
+    /* When we use inline block to stack things, we have to
+    zero out the font size on the cintainer element */
+    font-size: 0px;
+}
+
+.polaroid {
+    width: 260px;
+    /* subtract */
+    margin: 20px;
+    display: inline-block;
+    /* Whenever you want a child element, you have to relative
+    position the parent */
+    position: relative;
+    /* come back here soon */
+}
+
+/* Whenever you style in an image. its ususally best to 
+make the image take up 100% of its parent element */
+.polaroid img{
+ width: 100%;
+ height: auto;
+ /* Border shorthand 1-width, style, color */
+ border: 10px solid #CCC;
+ border-bottom-width: 45px;
+}
+
+.polaroid p {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 14px;
+    width: 280px;
+    text-align: center;
+    color: aquamarine;
+}

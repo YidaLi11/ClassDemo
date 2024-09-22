@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/> 
+        <meta name ="viewport" content="width=device-with, initial-scale=1"/> 
+        <title>Intro Css</title> 
+        <!--Internal style sheet-->
+        <style type="text/css">
+            /* universal selector is commonly used to zero out
+             the browser default margins and padding*/
+             *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+             }  
+             /*tag selectors aka type or element selectors apply to every
+             instance of that tag on that page*/
+
+             div {
+                background-color: aqua;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+             }
+
+             body {
+                background-color: bisque;
+             }
+
+             p {
+               /*1rem = 16px*/
+               margin-top: 1rem;
+               border: 1px solid red;
+               padding:2rem 1rem;
+               border-width: 1px 5px 10px 20px;
+
+               color: #34c8a1;
+               font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+             }
+
+             a {
+               color:#000;
+               text-decoration: none;
+               font-weight: 900;
+             }
+
+             a:visited {
+              color: chartreuse;
+             }
+            /*class selectors always start with . inside our style sheet*/
+            .text_silly {
+              font-family: 'Times New Roman', Times, serif;
+              text-decoration: wavy underline;
+              color:blue;
+
+             }
+             
+             #reallyimportant {
+              font-weight: 600;
+              font-size: x-large;
+              font-style: oblique;
+              line-height: 1.5;
+
+             }
+
+             span{
+              color:blue
+             }
+             
+        </style> 
+    </head>
+    <body>
+      <div class="text_silly">Testing 1 2 3</div>
+      <p>A p tag  just to add <a href="#" class=".text_silly">some spacing</a> to show margin and padding</p>
+      <div>Another dive</div>
+      <p id="reallyimportant">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <span style="color: rgb(14, 4, 52);">labore et dolore magna aliqua.</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      </p>
+    </body>
+</html>

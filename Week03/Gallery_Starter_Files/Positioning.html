@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/> 
+        <meta name ="viewport" content="width=device-with, initial-scale=1" /> 
+        <title>Positioning</title>  
+        <style type="text/css">
+
+            div{
+                min-height: 100px;
+            }
+            .red {
+                background-color: red;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .yellow{
+                background-color: yellow;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+
+            .absolute{
+                position: absolute;
+            }
+
+            .relative {
+                position: relative;
+            }
+
+            .fixed{
+                position: fixed;
+            }
+
+            .top {
+                top: 0;
+            }
+
+            .bottom {
+                bottom: 0;
+            }
+
+            .left {
+                left: 0;
+            }
+
+            .right {
+                right: 0;
+            }
+
+            .top_50 {
+                top: 50px;
+            }
+
+            .right_50{
+                bottom: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="red relative top_50">Relative</div>
+        <div class="green absolute top_50">Absolute positioned divs look for a parent element with a defind
+            position property to position against. if it can't find one, its psoition absolutely to body text
+        </div>
+        <div class="yellow fixed top_50">Fixed behaves similarly to absolute but will be fixed</div>
+        <div class="blue relative" style="width: 500px; height: 500px;">
+           When we have a relative position parent, absolute or fixed position child elment will position 
+           <div class="absolute red top_50 right_50" style="width: 500px; height: 500px;"></div>
+           <div class="fixed green top_50 right_50" style="width: 500px; height: 500px;"></div>
+        </div>
+    </body>
+</html>
