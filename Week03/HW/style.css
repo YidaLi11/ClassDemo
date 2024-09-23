@@ -91,7 +91,7 @@ a {
 
 .photo p {
     font-size: 30px;
-    margin: 0 0 0 20px;
+    margin: -15px 0 0 20px;
     position: absolute;
     top: 400px;
     width: 500px;
@@ -101,6 +101,7 @@ a {
     border: 5px solid rgb(255, 255, 255);
     background-color: rgb(239, 224, 205,0.5);
 }
+
 
 h2{
     margin: 20px 0px 0px 700px;
