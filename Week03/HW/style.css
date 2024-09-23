@@ -140,3 +140,16 @@ strong {
     position: absolute;
     margin: -670px 0 0 1100px;
 }
+
+.contact {
+    font-size: 35px;
+    position: absolute;
+    margin: -70px 0 0 100px;
+    display: block;
+    background-color: white;
+
+}
+
+.contact:hover {
+    color: bisque;
+}
