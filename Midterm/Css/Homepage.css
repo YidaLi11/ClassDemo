@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+*{
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(255, 198, 128, 0.697)0%,
+    rgba(248, 160, 82, 0.767)100%);
+}
+
+html,body {
+  cursor: url('../Resources/cursor.cur') 16 16, auto;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255, 198, 128, 0.697)0%,
+    rgba(255, 143, 45, 0.514)100%);
+}
+
+.menu2{
+  display: none;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    justify-content: space-between;
+  }
+
+  .menu2{
+    display: none;
+
+  }
+
+.menu li a{
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+    font-family: "Pacifico", cursive;
+}
+
+h1.logo{
+    color: white;
+    font-family: "Pacifico", cursive;
+    transition: all 1s ease-in-out;
+}
+
+h1.logo:hover{
+    color: rgb(248, 137, 0);
+    cursor: pointer;
+}
+
+.menu li a:hover{
+    background-color: white;
+    color: antiquewhite;
+}
+
+.img1 {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    transition: all 1s ease-in-out;
+  }
+
+.img1:hover {
+    filter: grayscale(0%);
+  }
+
+.img2 {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: all 1s ease-in-out;
+  }
+
+.img2:hover {
+    transform: scale(1.15);
+    border-radius: 5px;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem;
+    border: 5px solid rgb(255, 147, 69);
+    border-radius: 10px;
+    position:relative;
+}
+
+.photo2{
+  position:absolute;
+  width: 30%;
+  height:auto;
+  left: 3rem;
+  top: 20%;
+  border-radius: 10px;
+}
+
+.photo3{
+    position:absolute;
+    width: 17%;
+    height:auto;
+    top: 50%;
+    left: 60%;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+.circle1{
+    width: 100%;
+    height: auto;
+    border-radius: 50% 50%;
+    transition: all 1s ease;
+}
+
+.photo4{
+    position:absolute;
+    width: 27%;
+    height:auto;
+    top: 55%;
+    border-radius: 50%;
+    right:10%;
+  }
+
+  .circle1:hover{
+    transform: scale(1.2) rotate(360deg);
+  }
+
+  .text{
+    position:absolute;
+    top: 5%;
+    align-items: center;
+  }
+
+  .text h2{
+    font-family: "Pacifico", cursive;
+    font-size: 6rem;
+    color: rgb(255, 255, 255);
+    transition: all 1s ease-in-out;
+  }
+
+  .text h2:hover{
+    color: rgb(226, 147, 98);
+    cursor: pointer;
+  }
+
+  .text2{
+    position:absolute;
+    top: 30%;
+    right:1%;
+    align-items: center;
+    display: block;
+    background-color: rgba(251, 213, 163, 0.823);
+    border-radius: 10px;
+  }
+
+  .text2 p{
+    font-family: "Pacifico", cursive;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    transition: all 1s ease-in-out;
+  }
+
+  .text2 p:hover{
+    font-family: "Pacifico", cursive;
+    color: rgb(255, 115, 0);
+    cursor: pointer;
+  }
+
+
+  .logoimg{
+    width:7%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  audio{
+    width: 250px;
+    height: 35px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .text2 p{
+      font-size: 1.4rem;
+    }
+
+    .text h2 {
+      font-size: 4rem;
+    }
+
+    .img1 {
+      filter: grayscale(0%);
+    }
+
+    .menu li a{
+      font-size: 1.2rem;
+    }
+
+    h1.logo {
+      font-size: 1.5rem;
+    }
+
+    .photo3{
+      left: 45%;
+      width:17%;
+    }
+
+    .photo4{
+      width:27%;
+      right:20%;
+    }
+    
+    audio{
+      width: 200px;
+      height: 30px;
+    }
+
+    .text h2{
+      color: white;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    html{
+      background: url('../Resources/未命名作品\ 9.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .img1{
+      visibility: hidden;
+    }
+
+    .text h2{
+      font-size: 5rem;
+      color: white;
+      top: 0;
+    }
+
+    .text h2:hover{
+      color: white;
+    }
+
+    .photo4 {
+      top:90%;
+      width: 70%;
+    }
+
+    .photo3{
+      top:90%;
+      width: 30%;
+      left:10%;
+    }
+
+    .container{
+      border: none;
+      top:-10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      background: none;
+    }
+
+    h1.logo{
+      font-size: 2rem;
+    }
+
+    h1.logo:hover{
+      font-size: 2rem;
+    }
+
+    .menu li {
+      font-size: 1.2rem;
+    }
+
+    .text2{
+      top: 45%;
+      align-items: center;
+      left:45%
+    }
+
+    .text2 p{
+      font-size: 1.5rem;
+    }
+
+    header{
+      background-color: rgba(241, 189, 120, 0.883);
+      flex-direction: column;
+      display: none;
+    }
+
+    audio{
+      width: 100px;
+      height: 30px;
+    }
+
+    .menu2{
+       display: flex;
+    }
+
+    ul li ul{
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s ease-in-out;
+    }
+
+
+    ul li:hover ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      opacity:1;
+      visibility: visible;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
+
+    .text2{
+      background-color: rgba(251, 213, 163, 0.929);
+    }
+
+    .logoimg{
+      width: 12%;
+    }
+
+    .circle1:hover{
+      transform: rotate(0deg);
+    }
+
+  }
+
+
+
+
+

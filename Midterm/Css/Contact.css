@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+*{
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(255, 198, 128, 0.697)0%,
+    rgba(248, 160, 82, 0.767)100%);
+}
+
+html,body {
+  cursor: url('../Resources/cursor.cur') 16 16, auto;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    background: linear-gradient(90deg, rgba(255, 198, 128, 0.697)0%,
+    rgba(255, 143, 45, 0.514)100%);
+}
+
+.menu2{
+  display: none;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    justify-content: space-between;
+  }
+
+  .menu2{
+    display: none;
+
+  }
+
+.menu li a{
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+    font-family: "Pacifico", cursive;
+}
+
+h1.logo{
+    color: white;
+    font-family: "Pacifico", cursive;
+    transition: all 1s ease-in-out;
+}
+
+h1.logo:hover{
+    color: rgb(248, 137, 0);
+    cursor: pointer;
+}
+
+.menu li a:hover{
+    background-color: white;
+    color: antiquewhite;
+}
+
+.logoimg{
+    width:7%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+ .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem 1rem;
+    border: 5px solid white;
+    border-radius: 10px;
+    position:relative;
+    justify-content: space-between;
+}
+
+.img1 {
+  width: 33%;
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.8s ease-in-out;
+}
+
+.img1:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+.photo {
+  margin: 45px;
+}
+
+.texts {
+  left: 15%;
+  width: 100%;
+  height: auto;
+  font-size: 2.5rem;
+  position: absolute;
+  text-align: center;
+}
+
+p.information {
+  color: white;
+  font-family: "Pacifico", cursive;
+  transition: all 0.8s ease-in-out;
+}
+
+p.information:hover {
+  color: rgb(241, 158, 50);
+  cursor: pointer;
+}
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 10px 10px;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 24%
+}
+
+.icons{
+  width: 20%;
+  height: auto;
+}
+
+.icon {
+  width: 50%;
+  height: auto;
+  transition: all 0.8s ease-in-out;
+}
+
+.icon:hover{
+  transform: scale(1.2);
+}
+
+.photo2{
+  display: none;
+}
+
+.img2 {
+  display: none;
+}
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    .menu li a{
+      font-size: 1.2rem;
+    }
+
+    h1.logo {
+      font-size: 1.5rem;
+    }
+
+    .texts {
+      font-size: 1.75rem;
+    }
+
+    .icon {
+      width: 52%;
+      height: auto;
+    }
+
+    .icons {
+      width: 17%;
+      height: auto;
+    }
+
+    .photos {
+      left: 28%;
+    }
+
+    .container {
+      margin: 5rem 1rem;
+    }
+
+    .img1 {
+      width: 40%;
+    }
+
+    .texts {
+      left:20%;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 767px) {
+
+
+    h1.logo{
+      font-size: 2rem;
+    }
+
+    h1.logo:hover{
+      font-size: 2rem;
+    }
+
+    .menu li {
+      font-size: 1.2rem;
+    }
+
+    header{
+      background-color: rgba(241, 189, 120, 0.883);
+      flex-direction: column;
+      display: none;
+      
+    }
+
+    .menu2{
+       display: flex;
+    }
+
+    ul li ul{
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s ease-in-out;
+    }
+
+
+    ul li:hover ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      opacity:1;
+      visibility: visible;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
+
+    .logoimg{
+      width: 12%;
+    }
+
+    .img1 {
+     opacity: 0;
+    }
+
+    .img2 {
+      width: 90%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      right: 5%;
+      position: absolute;
+      margin: 9rem auto;
+     }
+
+     .photo2{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      border: none;
+    }
+
+
+    .texts {
+      left: 0;
+      width: 100%;
+      height: auto;
+      font-size: 1.8rem;
+      position: absolute;
+    }
+    
+    .photos {
+      margin-top: 50px;
+      width: 90%;
+      height: auto;
+      left: 3%;
+    }
+
+    .icons {
+      width: 20%;
+      height: auto;
+    }
+
+  }
+
+
+
+
+
