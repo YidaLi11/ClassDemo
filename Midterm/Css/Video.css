@@ -143,27 +143,6 @@ video {
        display: flex;
     }
 
-    ul li ul{
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 1s ease-in-out;
-    }
-
-
-    ul li:hover ul{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      opacity:1;
-      visibility: visible;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: auto;
-    }
-
     .logoimg{
       width: 12%;
     }
@@ -174,6 +153,14 @@ video {
       margin: 1rem auto;
       border: 5px solid antiquewhite;
       border-radius: 10px;
+    }
+
+    nav{
+      display: none;
+    }
+
+    .show{
+      display: block;
     }
 
   }

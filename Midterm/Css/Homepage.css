@@ -317,27 +317,6 @@ h1.logo:hover{
        display: flex;
     }
 
-    ul li ul{
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 1s ease-in-out;
-    }
-
-
-    ul li:hover ul{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      opacity:1;
-      visibility: visible;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: auto;
-    }
-
     .text2{
       background-color: rgba(251, 213, 163, 0.929);
     }
@@ -348,6 +327,14 @@ h1.logo:hover{
 
     .circle1:hover{
       transform: rotate(0deg);
+    }
+
+    nav{
+      display: none;
+    }
+
+    .show{
+      display: block;
     }
 
   }

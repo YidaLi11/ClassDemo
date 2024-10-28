@@ -108,7 +108,7 @@ h1.logo:hover{
   left: 15%;
   width: 100%;
   height: auto;
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   position: absolute;
   text-align: center;
 }
@@ -169,7 +169,8 @@ p.information:hover {
     }
 
     .texts {
-      font-size: 1.75rem;
+      font-size: 2.1rem;
+      left:20%;
     }
 
     .icon {
@@ -192,10 +193,6 @@ p.information:hover {
 
     .img1 {
       width: 40%;
-    }
-
-    .texts {
-      left:20%;
     }
 
 
@@ -225,27 +222,6 @@ p.information:hover {
 
     .menu2{
        display: flex;
-    }
-
-    ul li ul{
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 1s ease-in-out;
-    }
-
-
-    ul li:hover ul{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      opacity:1;
-      visibility: visible;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: auto;
     }
 
     .logoimg{
@@ -285,7 +261,7 @@ p.information:hover {
       left: 0;
       width: 100%;
       height: auto;
-      font-size: 1.8rem;
+      font-size: 2.1rem;
       position: absolute;
     }
     
@@ -299,6 +275,14 @@ p.information:hover {
     .icons {
       width: 20%;
       height: auto;
+    }
+
+    nav{
+      display: none;
+    }
+
+    .show{
+      display: block;
     }
 
   }

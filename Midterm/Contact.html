@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<script>
+    function toggleMenu() {
+      document.getElementById('main-nav').classList.toggle('show')
+    }
+  </script>
+  
 </head>
 <body>
 
@@ -25,17 +31,16 @@
 
 <header class="menu2">
     <img src="./Resources/未命名作品 8.png" class="logoimg">
-    <nav>
+    <h1 class="logo" onclick="toggleMenu()">Yida's Portfolio</h1>
+    <nav id="main-nav">
         <ul class="menu">
-            <li><h1 class="logo">Yida's Portfolio</h1>
-                <ul>
-                    <li><a href="./Homepage.html">Home</a></li>
-                    <li><a href="./2D.html">2D Work</a></li>
-                    <li><a href="./Video.html">Videos</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+             <li><a href="./Homepage.html">Home</a></li>
+             <li><a href="./2D.html">2D Work</a></li>
+             <li><a href="./Video.html">Videos</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 </header>
 
 <div class="container">
@@ -44,10 +49,10 @@
      </div>
      <div class="texts">
     <div class="text1">
-        <p class="information">Phone: XXX-XXX-XXXX</p>
+        <p class="information">Phone: 929-XXX-XXXX</p>
     </div>
     <div class="text2">
-        <p class="information">E-mail: XXXXXXXXX@XXX.com</p>
+        <p class="information">E-mail: Yida_Li@XXX.com</p>
     </div>
     <div class="photos">
         <div class="icons">
@@ -55,19 +60,19 @@
         </div>
 
         <div class="icons">
-            <a href="#"><img src="./Resources/youtube.png" class="icon"/></a>
+            <a href="#" target="_blank"><img src="./Resources/youtube.png" class="icon"/></a>
         </div>
 
         <div class="icons">
-            <a href="#"><img src="./Resources/facebook.png" class="icon"/></a>
+            <a href="#" target="_blank"><img src="./Resources/facebook.png" class="icon"/></a>
         </div>
 
         <div class="icons">
-            <a href="#"><img src="./Resources/ins.png" class="icon"/></a>
+            <a href="#" target="_blank"><img src="./Resources/ins.png" class="icon"/></a>
         </div>
 
         <div class="icons">
-            <a href="#"><img src="./Resources/in.png" class="icon"/></a>
+            <a href="#" target="_blank"><img src="./Resources/in.png" class="icon"/></a>
         </div>
       
     </div>

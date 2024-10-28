@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<script>
+    function toggleMenu() {
+      document.getElementById('main-nav').classList.toggle('show')
+    }
+  </script>
+  
 </head>
 <body>
 
@@ -25,18 +31,18 @@
 
 <header class="menu2">
     <img src="./Resources/未命名作品 8.png" class="logoimg">
-    <nav>
+    <h1 class="logo" onclick="toggleMenu()">Yida's Portfolio</h1>
+    <nav id="main-nav">
         <ul class="menu">
-            <li><h1 class="logo">Yida's Portfolio</h1>
-                <ul>
-                    <li><a href="./Homepage.html">Home</a></li>
-                    <li><a href="./2D.html">2D Work</a></li>
-                    <li><a href="./Contact.html">Contact</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+             <li><a href="./Homepage.html">Home</a></li>
+             <li><a href="./2D.html">2D Work</a></li>
+             <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
 </header>
+
 <div class="container">
     <video controls class="vi">
         <source src="./Resources/Sequence 01_1.mp4" type="video/mp4">
