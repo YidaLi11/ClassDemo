@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Content (math + arrays)</title>
+  </head>
+  <script type="text/javascript">
+    //make an array of image sources to choose from at random when the page loads
+    var arrImg = [
+      'https://www.newhay.co.uk/cdn/shop/articles/white-rabbit-running_1100x.jpg?v=1646132516','https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg','https://cdn.britannica.com/18/137318-050-29F7072E/rooster-Rhode-Island-Red-roosters-chicken-domestication.jpg'
+    ];
+
+    //random links to correspond to each image
+    var arrLinks = [
+      'https://www.newhay.co.uk/blogs/caring-for-rabbits/how-to-keep-your-rabbit-active','https://en.wikipedia.org/wiki/Goat','https://www.britannica.com/animal/chicken'
+    ]
+
+    //helper function for picking a random number betwee 0 and max
+    function randomIndex(max){
+      return Math.floor(Math.random() * max)
+    }
+
+    //write our own random image function outside of our event listeners
+    //remember not to call this function until the DOM loads 
+    function loadRandomImage() {
+      var index = randomIndex(arrImg.length)
+      var img = document.getElementById('animal')
+      var link = document.getElementById('dynLink')
+
+      //assign the source attribute of the image element to a string stored in a random index slot in our image array
+      img.src = arrImg[index]
+      //assign the href from our links array and random index
+      link.href = arrLinks[index]
+    }
+
+    // loadRandomImage()
+    // // wait for the page to finish loading the body content before we try and store any elements as js variables
+    // document.addEventListener('DOMContentLoaded', function(){
+    //   //assign elements to variables, we could call functions we want to run on load, add eventlisteners to elements like buttons on our page
+    //   loadRandomImage();
+    // })
+
+    document.addEventListener('DOMContentLoaded', loadRandomImage)
+
+
+  </script>
+  <body>
+    <a href="#" id="dynLink" target="_blank"><img src="" id="animal" /></a>
+  </body>
+</html>

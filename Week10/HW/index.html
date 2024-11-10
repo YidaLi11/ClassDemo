@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Find your pet!</title>
+    <style>
+        img{
+            width: 1200px;
+            height: auto;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        h1{
+            font-size: 3rem;
+        }
+
+        .p1{
+            font-size: larger;
+
+        }
+
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+            border: 2px solid grey;
+            border-radius: 20px;
+            line-height: 35px;
+            padding: 20px;
+        }
+
+        .Picked{
+            position: fixed;
+            width: auto;
+            text-align: center;
+            z-index: 9999;
+            top: 200px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: none;
+        }
+
+        .Picked p {
+            font-size: 100px;
+            background: white;
+        }
+
+        .hidden{
+            display: block;
+        }
+
+        .hidden2{
+            display: none;
+        }
+
+        .hidden3{
+            pointer-events: all;
+        }
+
+        .Pick{
+            display: none;
+        }
+
+        button{
+            width: 100px;
+            border-radius: 20px;
+            padding: 10px 0;
+            border: 1px solid black;
+            font-size: larger;
+            transition: all 1s ease-in-out;
+            background-color: white;
+            color: black;
+        }
+
+        button:hover{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .change{
+            width: 300px;
+            border-radius: 20px;
+            padding: 10px 0;
+            border: 1px solid black;
+            font-size: larger;
+            background-color: rgb(255, 255, 255);
+            transition: all 1s ease-in-out;
+            color: rgb(0, 0, 0);
+        }
+
+        .change:hover{
+            background-color: rgb(60, 60, 60);
+            color: aliceblue;
+        }
+
+        #changenum{
+            font-size: 50px;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        var petsimg = ['https://twinmaplesvethospital.com/wp-content/uploads/2023/01/Exotic-Pets-img.jpg',
+            'https://media.4-paws.org/d/2/5/f/d25ff020556e4b5eae747c55576f3b50886c0b90/cut%20cat%20serhio%2002-1813x1811-720x719.jpg',
+            'https://bjdoghome.com/uploadfile/image/20210329/2021032912050788788.jpg',
+            'https://cdn.britannica.com/66/195966-138-F9E7A828/facts-turtles.jpg?w=800&h=450&c=crop',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/KoreaHamster.jpg/1200px-KoreaHamster.jpg',
+            'https://imagepphcloud.thepaper.cn/pph/image/279/58/291.jpg',
+            'https://i.ntdtv.com/assets/uploads/2024/01/id103845787-GettyImages-1778731846.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Red_jungle_fowl.png/640px-Red_jungle_fowl.png',
+            'https://azgardens.com/wp-content/uploads/2022/05/Goldfish-PondComet2024.jpg',
+            'https://www.aces.edu/wp-content/uploads/2018/11/iStock-182344013.jpg'
+        ]
+
+        document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('Next').addEventListener('click',Nextimg)
+            document.getElementById('Next').addEventListener('click',Started)
+            document.getElementById('Picked').addEventListener('click',Congratulation)
+            document.getElementById('Picked2').addEventListener('click',Changemind)
+            document.getElementById('Finished').addEventListener('click',Finish)
+
+            let count = 0;
+
+            function Nextimg(){
+                let pets = document.getElementById('pets')
+                pets.src = petsimg[count]
+                if(count<petsimg.length -1){
+                    count ++
+                }else{
+                    count = 0
+                }
+            }
+
+
+            function Started() {
+                let start = document.getElementById('start')
+                start.classList.add('hidden2')
+                let Picked = document.getElementById('Picked')
+                Picked.classList.remove('Pick')
+            }
+
+            let changetime =0;
+
+            function Congratulation() {
+                let Pick = document.getElementById('Picked1')
+                Pick.classList.toggle('hidden')
+            }
+
+            function Changemind() {
+                let Pick = document.getElementById('Picked1')
+                Pick.classList.toggle('hidden')
+                changetime ++;
+            }
+
+            function Finish(){
+                if(changetime<2){
+                    let done = `Excellent, you only struggled for ${changetime} time`
+                let done1 = document.getElementById('changenum')
+                done1.append(done)
+                }else if(changetime<3){
+                    let done = `Nice, you only struggled for ${changetime} times`
+                let done1 = document.getElementById('changenum')
+                done1.append(done)
+                }else{
+                    let done = `It's okay, you only struggled for ${changetime} times`
+                let done1 = document.getElementById('changenum')
+                done1.append(done)
+                }
+                let done2 = document.getElementById('Picked2')
+                done2.classList.toggle('hidden2')
+                let done3 = document.getElementById('Finished')
+                done3.classList.toggle('hidden2')
+            }
+
+        })
+
+    </script>
+  </head>
+  <body>
+<div class="container">
+<h1>Find your Pet!</h1>
+<p class="p1">Not sure what pet to get? We got you!</p>
+<button id="Next">Next</button>
+<button id="Picked" class="Pick">Pick</button>
+<p id="start">Press "Next" to start</p>
+    <img src="https://t3.ftcdn.net/jpg/04/81/32/08/360_F_481320874_0ySypkY4mZYl4jEmCOGXMbPgVhocmw2t.jpg" id="pets"/>
+</div>
+
+<div id="Picked1" class="Picked">
+<p>Congratulation!</p>
+<button id="Picked2" class="change">Chaneg your mind?</button>
+<button id="Finished">Finished</button>
+<p id="changenum" class="Finish"></p>
+</div>
+  </body>
+</html>

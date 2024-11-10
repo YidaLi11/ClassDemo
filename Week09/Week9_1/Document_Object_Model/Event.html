@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event delegation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        img{
+            display: block;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        .active{
+            color: red;
+            text-shadow: 2,2,2,2,rgba(0,0,0,0.4);
+        }
+    </style>
+    <script>
+        //gloablly declare our hide buttton
+        let hideBtn
+
+        //wait for the Dom content to load before to executing certain lines of code
+        document.addEventListener('DOMContentLoaded', function(event){
+            //assign html elements to js variable
+            hideBtn = document.getElementById('hidebtn')
+            //assign other event listeners
+            hideBtn.addEventListener('click', toggleVisible)
+
+            document.getElementById('eventh1').addEventListener('mouseover', function(event){
+                //peep the event object that got passes to this anonymous function
+                //console.log(event.target)
+                //store the event element that recieve the event
+                var element = event.target
+
+                element.classList.toggle('active')
+            })
+        })
+
+        function toggleVisible() {
+            var peep = document.getElementById('chicken')
+            peep.classList.toggle('hidden')
+        }
+
+
+
+    </script>
+  </head>
+
+  <body>
+    <h1 id="eventh1">This is here to be moused over, so that we can see the event object</h1>
+
+    <button id="hidebtn">Hide</button>
+    <img id="chicken" 
+    src="https://cdn.britannica.com/18/137318-050-29F7072E/rooster-Rhode-Island-Red-roosters-chicken-domestication.jpg"
+    />
+  </body>
+</html>

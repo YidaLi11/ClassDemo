@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Math Methods</title>
+    <script type="text/javascript">
+      //integers = whole numbers
+      const x = 15;
+      const y = 35;
+      let z;
+      z = 10.5 //float
+
+      //addition + 
+      console.log(x+y)
+      //subtraction -
+      console.log(x-y)
+      //multiplication *
+      console.log(x*y)
+      //divition /
+      console.log(x/y)
+
+      // modular operator %, returns the divition remainder
+      // this is really helpfl when we want to use odd or even nnumber or every nth number
+      console.log(10%3);
+
+      // just like algebra, order of operation matters
+      console.log((x+y) * (y-1))
+
+      //increments
+      //x++
+
+      //decrement
+      //x--
+
+      //increment by a certain number
+      //x += 2
+
+      //decrement by a certain number
+      //x--
+
+      //floating point numbers and some basic math methods
+      var k = 2.25;
+      //Math.floor(num) will ALWAYS round down
+      console.log('floor k result = ', Math.floor(k));
+
+      //Math.ceil(num) will ALWAYS round up
+      console.log('ceil k result =', Math.ceil(k))
+
+      //Math.round(num) will round up or down based on the decimal value
+      var num1 = 2.2
+      var num2 = 2.7
+
+      console.log('round num1 result = ', Math.round(num1))
+      console.log('round num1 result = ', Math.round(num2))
+
+      //Math.random() return a floating point number between 0 and 1
+      console.log(Math.random())
+
+      //We can use Math.random in combination with Math.round() to get the whole value
+      //for a true/false situation
+      var yn = Math.round(Math.random()) //retune 0 or 1
+      console.log(yn)
+
+      if(yn === 0){
+        console.log('flase')
+      }else{
+        console.log('true')
+      }
+
+      //Return number between 0 and n
+      function randNum(max) {
+        //when we declare a variable inside a function, it's scoped aka not accessibale outside this function
+        var rn = Math.round(max * Math.random()) 
+        // console.log(rn)
+        return rn
+      }
+
+      var q = randNum(34)
+      console.log(q)
+
+      //test is a global variable but it gets a value when we assigned
+      var test
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        #content{
+            color: red;
+        }
+
+        @media screen and (max-widt:767px) {
+            #content{
+                color: blue;
+            }
+        }
+    </style>
+
+  </head>
+  <body>
+    <button onclick="addSingleP()" id="clickme" style="color:red">
+        Add a single p
+    </button>
+
+    <button onclick="addMultiP(9)">
+        Add multiple P
+        </button>
+
+        <div id="content">
+            <p>This is some dummy text</p>
+        </div>
+        <!-- Loading the script tag after our html content is a hacky workaround for making sure our html elements exsist before we 
+         try and store or manipulate them with java script -->
+        <script>
+    //declaring and assigning a global variable
+    const mybutton = document.getElementById('clickme');
+    //change the style attribute
+    mybutton.style = "color:blue";
+
+    //Globally declare our content varaible, so that we can access it anywhere within our script tag
+    let content;
+
+    // we can assign later on in our code
+    content= document.getElementById('content')
+    console.log(content);
+
+    function addSingleP() {
+        content.innerHTML = '<p>This is a poorly instantiated p tag using string trickery</p>'
+    }
+
+    function addMultiP(num) {
+        //beware of infinite loops
+        for (var i =0; i < num; i++){
+        //create a p element(node)
+        var p = document.createElement('P')
+        //create a text node to go inside
+        var text = document.createTextNode(//'THis is a paragraoh numer '+ (i+1) + ' inserted with nodes.'
+        //Or use template litterals
+        `This is paragraph number ${i+1} inserted with nodes.`)
+        //append the text node to the p element
+        p.appendChild(text)
+        //append the P element to my content div
+        content.appendChild(p)
+        }
+
+    }
+
+    </script>
+            
+
+        </script>
+  </body>
+</html>
