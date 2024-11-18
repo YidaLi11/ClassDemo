@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <h1>Hello <span id="user">World</span></h1>
+    
+    <form id="userInfo">
+        <label for="firstName">What's your Name?</label>
+        <input type="text" name="firstName" id="firstName" required/>
+        <button type="submit" id="nameBtn">Submit</button>
+    </form>
+
+    <button id="clearBTN">Clear Current Button</button>
+
+    <script>
+        //set user name based on form input
+        const saveuser = () =>{
+            const name = document.getElementById('firstName').value
+            console.log(name)
+            localStorage.firstName = name
+            localStorage.bagOfSpiders = true
+        }
+
+        //a function to clear out local storage
+        const clearLocalStorage = () => {
+            //empty local storage for this URL
+            localStorage.clear()
+            //after we clear the storage we want the page to reload
+            window.location.reload()
+        }
+
+        //DOM LOADED LISTENER to apply other event Listeners
+        document.addEventListener('DOMContentLoaded',() =>{
+            document.getElementById('nameBtn').addEventListener('click',(e)=>{
+                //e.preventDefault()
+                saveuser()
+            })
+
+            //check if the key firstname already in local storage
+            if(localStorage.firstName){
+                //use that value to replace World with the name value
+                document.getElementById('user').innerHTML = localStorage.firstName
+            }else{
+                console.log('Fill out the form to populate First name')
+            }
+
+            const btnClear = document.getElementById('clearBTN')
+            btnClear.addEventListener('click',clearLocalStorage)
+        })
+
+
+    </script>
+
+
+  </body>
+</html>

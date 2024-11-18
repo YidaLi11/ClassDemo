@@ -89,10 +89,6 @@
             }
 
 
-          const moneyround = (num) =>{
-            return Math.ceil(num * 100)/100
-          }
-
             //calculate our tip
             tip = bill * per
             tip = moneyround(tip)
@@ -104,9 +100,30 @@
             const p2 =document.createElement('P')
             const p3 =document.createElement('P')
             const p4 =document.createElement('P')
+
+            let t1 = document.createTextNode(`Bill it $${bill}`)
+            let t2 = document.createTextNode(`Tip Percentage is ${per*100}%`)
+            let t3 = document.createTextNode(`Calculated tip is: $${tip}`)
+            //'calculated tip is ' + tip + '.'
+            let t4 = document.createTextNode(`Tota: $${total}.`)
+
+            p1.appendChild(t1)
+            p2.appendChild(t2)
+            p3.appendChild(t3)
+            p4.appendChild(t4)
+
+            result.appendChild(p1)
+            result.appendChild(p2)
+            result.appendChild(p3)
+            result.appendChild(p4)
+            
           }
 
-          const t1 = (document.createNextNode = `Bill it $${bill}`)
+          const moneyround = (num) =>{
+            return Math.ceil(num * 100)/100
+          }
+
+          
 
         </script>
         </head>
