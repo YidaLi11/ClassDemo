@@ -155,9 +155,7 @@
           img.addEventListener("click", function(){
             let show = document.createElement("div")         
             show.classList.add("preview")          
-            show.onclick = function () {
-              show.remove()
-            }
+          
             let showimg = document.createElement("img")          
             showimg.src = img.src         
             show.append(showimg)
@@ -174,6 +172,9 @@
                 showimg.style.width = width1 * 0.95 + "px"
                 showimg.style.height = height1 * 0.95 + "px"
               }
+            }
+            show.onclick = function () {
+              show.remove()
             }
           })
         }
