@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+      
+      .bg-body-tertiary{
+        background-color: rgb(249, 189, 111) !important;
+      }
+
+      .navbar-expand-lg .navbar-nav .nav-link {
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+        color: white;
+      }
+
+      .navbar-expand-lg .navbar-nav .nav-link:hover {
+        color: rgb(247, 147, 33);
+      }
+
+      .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        color: rgb(247, 147, 33);
+      }
+
+      .navbar{
+        --bs-navbar-brand-padding-y: 0;
+        --bs-navbar-nav-link-padding-x: 1rem;
+      }
+
+      .navbar-toggler{
+        border:var(--bs-border-width) solid rgb(255, 255, 255);
+        color: white;
+      }
+
+      .videobg{
+        position: relative;
+        width: 100%;
+        display: flex;
+        margin-top: 65px;
+      }
+
+      .videobg video{
+        width: 100%;
+      }
+
+      .videotext{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+      }
+
+      p{
+        font-family: "Pacifico", cursive;
+      }
+
+      .displays{
+        width: 100%;
+        margin-top: 100px;
+        position: relative;
+      }
+
+      html{
+        background: url(./Resources/未命名作品\ 9.png) no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      body{
+        background-color: transparent;
+      }
+
+      .tagname{
+        font-size: 50px;
+        padding-top: 220px;
+      }
+
+      .btn{
+        font-size: 50px;
+        --bs-btn-padding-y: 0;
+        margin-bottom: 50px;
+      }
+
+      .btn-outline-light {
+        --bs-btn-hover-color: #ffffff;
+        --bs-btn-hover-bg: #fac05b;
+        --bs-btn-active-color: #ffffff;
+      }
+
+      .Hi{
+        font-size: 45px;
+        -webkit-box-reflect: below 5px linear-gradient(transparent,rgba(0, 0, 0, 0.585));
+        animation: glow 2s linear;
+      }
+
+      @keyframes glow{
+        0%{
+          color: #f7c74f;
+          text-shadow: 0 0 10px #ffc880;
+          -webkit-box-reflect: below 5px linear-gradient(transparent,rgba(0, 0, 0, 0));
+        }
+        100%{
+          color: white;
+          -webkit-box-reflect: below 5px linear-gradient(transparent,rgba(0, 0, 0, 0.585))
+        }
+      }
+
+      .Contact{
+        font-size: 55px;
+        color: white;
+        background-color: rgb(247, 147, 33);
+        margin-bottom: 0;
+      }
+
+      .Contact1{
+        font-size: 30px;
+      }
+
+      .photos {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: 10px 10px;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 24%
+      }
+
+      .icons{
+        width: 20%;
+        height: auto;
+      }
+
+      .icon {
+        width: 50%;
+        height: auto;
+        transition: all 0.8s ease-in-out;
+      }
+
+      .icon:hover{
+        transform: scale(1.2);
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .Hi{
+          font-size: 35px;
+        }
+
+        .tagname{
+          font-size: 45px;
+          padding-top: 100px;
+        }
+
+        .btn{
+          font-size: 45px;
+          margin-bottom: 55px
+        }
+
+        .Contact{
+          font-size: 45px;
+        }
+
+        .Contact1{
+          font-size: 30px;
+        }
+
+      }
+
+      @media only screen and (max-width: 767px) {
+        .Hi{
+          font-size: 20px;
+        }
+
+        .tagname{
+          font-size: 30px;
+          padding-top: 100px;
+        }
+
+        .btn{
+          font-size: 30px;
+        }
+
+        .Contact{
+          font-size: 40px;
+        }
+
+        .Contact1{
+          font-size: 20px;
+        }
+      }
+
+    </style>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrambleTextPlugin.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function (){
+        gsap.from('body',1.5,{
+        opacity: 0
+      })
+      gsap.from('nav',1.5, {
+        delay:0.5,
+        left:-2500
+      })
+       gsap.from(".Hi",2, {
+        skewY:50
+       }) 
+    })
+    </script>
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./Resources/未命名作品 8.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span>Click!</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scroll1">2D Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scroll2">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scroll3">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav bar End -->
+     <!-- Video bg -->
+      <div class="videobg">
+        <video autoplay loop muted>
+          <source src="./Resources/MVI_0603.MOV"/>
+        </video>
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-light">
+          <p class="Hi">Hi! I'm Yida</p>
+          <p class="Hi">Welcome to my portfolio!</p>
+        </div>
+      </div>
+      <!-- Video bg end -->
+       <!-- Content -->
+        <div class="displays" id="scroll1">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./Resources/IMG_0037.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./Resources/IMG_0062.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./Resources/IMG_0076.JPG" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span><img src="./Resources/未命名作品 8.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span><img src="./Resources/未命名作品 8.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top"></span>
+            </button>
+          </div>
+          <div class="position-absolute top-0 start-50 translate-middle text-center text-light">
+            <p class="tagname">2D Works</p>
+          </div>
+          <div class="position-absolute top-100 start-50 translate-middle text-center text-light pb-5">
+            <a href="./2D works.html"><button type="button" class="btn btn-outline-light">Learn More</button></a>
+          </div>
+      </div>
+      <div class="displays" id="scroll2">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <video autoplay loop muted class="w-100 ratio ratio-16x9">
+                <source src="./Resources/合成 2.mov"/>
+              </video>
+            </div>
+            <div class="carousel-item">
+              <video autoplay loop muted class="w-100 ratio ratio-16x9">
+                <source src="./Resources/Sequence 01_1.mp4"/>
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="position-absolute top-0 start-50 translate-middle text-center text-light">
+          <p class="tagname">Videos</p>
+        </div>
+        <div class="position-absolute top-100 start-50 translate-middle text-center text-light pb-5">
+          <a href="./Videos.html"><button type="button" class="btn btn-outline-light">Learn More</button></a>
+        </div>
+      </div>
+      <!-- 2D work -->
+       <!-- Vidoes -->
+        <div class="displays Contact" id="scroll3">
+          <div class="text-center top-100 start-50">
+            <p class="Contact">Contact information</p>
+            <p class="Contact1">Phone: 929-XXX-XXXX</p>
+            <p class="Contact1">E-mail: Yida_Li@XXX.com</p>
+        </div>
+        <div class="photos">
+          <div class="icons">
+              <a href="https://space.bilibili.com/25411149?spm_id_from=333.337.0.0" target="_blank"><img src="./Resources/bilibili.png" class="icon"/></a>
+          </div>
+  
+          <div class="icons">
+              <a href="#" target="_blank"><img src="./Resources/youtube.png" class="icon"/></a>
+          </div>
+  
+          <div class="icons">
+              <a href="#" target="_blank"><img src="./Resources/facebook.png" class="icon"/></a>
+          </div>
+  
+          <div class="icons">
+              <a href="#" target="_blank"><img src="./Resources/ins.png" class="icon"/></a>
+          </div>
+  
+          <div class="icons">
+              <a href="#" target="_blank"><img src="./Resources/in.png" class="icon"/></a>
+          </div>
+      </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
