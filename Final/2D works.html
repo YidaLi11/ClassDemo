@@ -51,6 +51,7 @@
         border: 10px solid antiquewhite;
         border-radius: 20px;
         transition: all 0.5s ease;
+        cursor: pointer;
       }
 
       .photo img{
@@ -93,7 +94,7 @@
         left: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
+        z-index: 100;
         animation: showing 0.5s linear;
       }
 
@@ -108,10 +109,13 @@
       }
 
       .preview img{
-        width: 50%;
-        height: auto;
         object-fit: contain;
+        width: 90%;
+        height: 90%;
+        max-width: 100%;
+        max-height: 100%;
         min-width: 50%;
+        min-height: 50%;
       }
 
       @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -136,7 +140,7 @@
             display: block;
         }
 
-        .show{
+        .Show{
             display: none;
         }
         
@@ -163,8 +167,6 @@
               let width1 = getComputedStyle(showimg).width.slice(0,-2)
               let height1 = getComputedStyle(showimg).height.slice(0,-2)
 
-              console.log(scroll.deltaY)
-
               if(scroll.deltaY > 0) {
                 showimg.style.width = width1 * 1.05 + "px"
                 showimg.style.height = height1 * 1.05 + "px"
@@ -190,7 +192,7 @@
      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top z-1">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="./Resources/未命名作品 8.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top">
+            <img src="./Resources/未命名作品 8.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top" style="pointer-events: none;">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span>Click!</span>
@@ -212,7 +214,7 @@
       </nav>
       <!-- Nav bar End -->
        <!-- 2D Works -->
-        <div class="photos show">
+        <div class="photos Show">
             <div class="photo">
                 <img src="./Resources/Album - revisedArtboard 1.png">
             </div>
@@ -229,7 +231,7 @@
                 <img src="./Resources/Yida-Package-1.png">
             </div>
         </div>
-        <div class="photos show">
+        <div class="photos Show">
             <div class="photo">
                 <img src="./Resources/Yida-Package-5.png">
             </div>
